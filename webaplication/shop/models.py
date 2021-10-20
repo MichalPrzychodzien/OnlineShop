@@ -19,7 +19,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     name = models.CharField(max_length=30)
     producent = models.ForeignKey(Producent, on_delete=models.CASCADE, blank=True, null=True)
-    image = models.FileField(upload_to='', blank=True)
+    image = models.FileField(upload_to='images/', blank=True)
     descriptions = models.CharField(max_length=350, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     update = models.DateTimeField(auto_now=True)
