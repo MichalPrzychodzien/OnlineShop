@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>Title</title>
+</head>
+<body>
+    {% if p_list %}
+
+        {% for product in p_list%}
+    <p>Cena produktu {{product.name}} wynosi {{product.price}} a wygląda tak <img src="{{product.image.url}}"></p>
+        {% endfor %}
+    {% else %}
+    <p>nie ma</p>
+
+    {% endif%}
+
+</body>
+</html>
